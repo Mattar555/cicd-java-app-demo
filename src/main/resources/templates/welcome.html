@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Engineering</title>
+    <link th:href="@{/styles/css/main.css}" rel="stylesheet" />
+    <script th:inline="javascript">
+        var nameJs = /*[[${Team}]]*/;
+    </script>
+    <script type="text/javascript" th:src="@{/static/js/actions.js}"></script>
+</head>
+<body>
+    <h2>Client Engineering</h2>
+    <p>
+        This is a sample body to illustrate application changes via CICD. This is <strong>Version 1</strong>.
+    </p>
+<!--    <button type="button" th:onclick="showAlert()">Show Alert</button>-->
+    <p><label>Team:</label><span th:text="${Team}"></span></p>
+    <button type="button" th:onclick="showName(nameJs);">Show Name</button>
+</body>
+</html>
