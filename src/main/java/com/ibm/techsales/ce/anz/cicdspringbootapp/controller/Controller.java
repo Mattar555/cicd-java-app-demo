@@ -8,7 +8,7 @@ public class Controller {
 
     @RequestMapping("/welcome")
     public String welcome(Model model) {
-        model.addAttribute("Team", " David, Marwan, Langley, Tony");
+        model.addAttribute("Team", " David, Marwan, Langley, Tony, Mikhail");
         return "welcome";
     }
 }
