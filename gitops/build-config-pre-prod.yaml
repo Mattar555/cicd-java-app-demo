@@ -1,0 +1,28 @@
+kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: payment-application-build-config
+  namespace: pre-production
+spec:
+  source:
+    type: Git
+    git:
+      uri: 'git@github.com:Mattar555/cicd-java-app-demo.git'
+    sourceSecret:
+      name: git-ssh-key
+  strategy:
+    type: Docker
+    dockerStrategy:
+      dockerfilePath: Dockerfile
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'payment-application:dev'
+#      kind: DockerImage
+#      name: 'default-route-openshift-image-registry.itzroks-666000qmn3-lxe97o-6ccd7f378ae819553d37d5f2ee142bd6-0000.jp-tok.containers.appdomain.cloud/java-app/test:v1'
+  resources: {}
+  successfulBuildsHistoryLimit: 5
+  failedBuildsHistoryLimit: 5
+
+  postCommit: {}
+  runPolicy: Serial

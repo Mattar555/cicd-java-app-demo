@@ -4,6 +4,16 @@ HELP.md
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### Maven ###
+mvnw
+mvnw.command
+
+### Target ###
+target/classes
+target/maven-archiver/
+target/maven-status/
+target/test-classes/
+
 ### STS ###
 .apt_generated
 .classpath
