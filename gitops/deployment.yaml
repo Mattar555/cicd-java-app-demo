@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-deployment
+  namespace: changeme
+  labels:
+    app: payment-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: payment-app
+  template:
+    metadata:
+      labels:
+        app: payment-app
+    spec:
+      containers:
+        - name: payments
+          image: image-registry.openshift-image-registry.svc:5000/cp4i/payment-application@sha256:0a999d253117a716847b399df1966ba38bf6b81b09d0d4b5654fb82b8b8a29ca
+          ports:
+            - containerPort: 8080
