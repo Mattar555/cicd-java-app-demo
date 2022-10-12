@@ -3,6 +3,8 @@ apiVersion: build.openshift.io/v1
 metadata:
   name: payment-application-build-config
   namespace: pre-production
+  labels:
+    type: build-config
 spec:
   source:
     type: Git
