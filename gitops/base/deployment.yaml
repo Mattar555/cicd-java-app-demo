@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: payments
-          image: image-registry.openshift-image-registry.svc:5000/pre-production/payment-application@sha256:f876e76103fc319c8e12c6657e17894501ddc812edfc66bd88494125a3c74009
+          image: image-registry.openshift-image-registry.svc:5000/pre-production/payment-application@sha256:89680856a595fdf376008d63806da7a2e012afc56219df157edc2e23a0f38a3d
           ports:
             - containerPort: 8080
