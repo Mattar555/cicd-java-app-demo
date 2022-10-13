@@ -1,0 +1,10 @@
+management:
+  endpoints:
+    web:
+      base-path: /
+      path-mapping:
+        prometheus: metrics
+      exposure:
+        include:
+          - prometheus
+
