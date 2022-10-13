@@ -6,7 +6,32 @@ namespace: cp4i
 bases:
   - ../../base
 
-patchesStrategicMerge:
-  - deployment.yaml
-  - service.yaml
-  - route.yaml
+# Not needed, the namespace above is sufficient to change the respective namespaces.
+
+#patches:
+#  - target:
+#      kind: Application
+#    patch: |-
+#      - op: replace
+#        path: /metadata/namespace
+#        value: testing
+#  - target:
+#      group: networking.io
+#      kind: Service
+#    patch: |-
+#      - op: replace
+#        path: /metadata/namespace
+#        value: testing
+#  - target:
+#      group: networking.io
+#      kind: Route
+#    patch: |-
+#      - op: replace
+#        path: /metadata/namespace
+#        value: testing
+
+
+#patchesStrategicMerge:
+#  - deployment.yaml
+#  - service.yaml
+#  - route.yaml

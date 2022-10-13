@@ -1,5 +1,0 @@
-kind: Route
-apiVersion: route.openshift.io/v1
-metadata:
-  name: payment-route
-  namespace: cp4i
