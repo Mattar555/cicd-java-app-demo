@@ -10,9 +10,9 @@ spec:
     type: Git
     git:
       uri: 'git@github.com:Mattar555/cicd-java-app-demo.git'
+      ref: "develop"
     sourceSecret:
       name: git-ssh-key
-      ref: "develop"
   strategy:
     type: Docker
     dockerStrategy:
